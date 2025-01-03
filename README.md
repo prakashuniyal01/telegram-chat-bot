@@ -22,36 +22,11 @@
 
 ### Requirements
 
-* Python 3.10+
+* Python 3.12
 * Telegram Bot API token
 * Groq API Key
 * dotenv (for environment variables)
 * MongoDB (for storing chat history - optional)
-
-### Docker
-
-#### GitHub Container Registry
-Simply run the following command to run the pre-built image from GitHub Container Registry:
-
-```shell
-# Save your environment variables in a file .env
-docker run --env-file .env ghcr.io/rabilrbl/groq-chatbot:latest
-```
-
-Update the image with:
-```shell
-docker pull ghcr.io/rabilrbl/groq-chatbot:latest
-```
-
-#### Build
-Build the image with:
-```shell
-docker build -t groq-chatbot .
-```
-Once the image is built, you can run it with:
-```shell
-docker run --env-file .env groq-chatbot
-```
 
 ### Installation
 
@@ -80,7 +55,7 @@ docker run --env-file .env groq-chatbot
 5. If you want to restrict public access to the bot, you can set `AUTHORIZED_USERS` in the `.env` file to a comma-separated list of Telegram user IDs. Only these users will be able to access the bot.
     Example:
     ```shell
-    AUTHORIZED_USERS=1234567890
+    AUTHORIZED_USERS=
     ```
 
 ### Bot Commands
